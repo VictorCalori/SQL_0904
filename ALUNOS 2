@@ -1,0 +1,29 @@
+ALUNOS 2 
+
+
+média Idade com letra “b”
+
+SELECT AVG(Idade) AS MEDIA_IDADE FROM `Alunos`WHERE PrimeiroNome LIKE '%b%'
+
+Soma Idade
+
+SELECT SUM(Idade) AS SOMAIDADE_ALUNOS FROM `Alunos`WHERE PrimeiroNome LIKE '%s%'
+
+Media idade alunas
+
+SELECT AVG(Idade) AS MEDIA_ALUNAS FROM `Alunos`WHERE Sexo = 'FEM' AND PrimeiroNome LIKE 'i%'
+
+
+media idade alunos
+
+SELECT AVG(Idade) AS MEDIA_ALUNAS FROM `Alunos`WHERE Sexo = 'MASC' AND PrimeiroNome LIKE 'g%'
+
+Soma idade alunas
+
+SELECT SUM(Idade) AS SOMAIDADE_ALUNOS FROM `Alunos`WHERE Sexo = 'FEM' AND PrimeiroNome LIKE '%A%'
+
+
+
+Soma idade alunos 
+
+SELECT SUM(Idade) AS SOMAIDADE_ALUNOS FROM `Alunos`WHERE Sexo = 'MASC' AND PrimeiroNome LIKE '%F%'
