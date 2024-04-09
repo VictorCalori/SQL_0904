@@ -1,0 +1,30 @@
+ALUNOS
+
+
+média Idade
+
+SELECT AVG(Idade) AS MEDIA_IDADE FROM `Alunos`WHERE 1;
+
+Soma Idade
+
+SELECT SUM(Idade) AS SOMAIDADE_ALUNOS FROM `Alunos`WHERE 1 
+
+Media idade alunas
+
+SELECT AVG(Idade) AS MEDIA_ALUNAS FROM `Alunos`WHERE Sexo = 'FEM';
+
+
+media idade alunos
+
+SELECT AVG(Idade) AS MEDIA_ALUNAS FROM `Alunos`WHERE Sexo = 'MASC';
+
+Soma idade alunas
+
+SELECT SUM(Idade) AS SOMAIDADE_ALUNOS FROM `Alunos`WHERE Sexo = 'FEM'
+
+
+
+Soma idade alunos 
+
+SELECT SUM(Idade) AS SOMAIDADE_ALUNOS FROM `Alunos`WHERE Sexo = 'MASC'
+
