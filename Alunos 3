@@ -1,0 +1,44 @@
+
+idade maxima de alunos com “c” menos meu nome
+
+SELECT MAX(Idade) AS MAX_SEMC 
+FROM `Alunos`
+WHERE Sexo = "MASC" AND PrimeiroNome NOT IN ('Victor') AND PrimeiroNome LIKE '%c%'
+
+
+Idade minima de alunas e alunos que tem letra “f” menos meu nome
+
+SELECT MIN(Idade) AS MAX_COMf 
+FROM `Alunos`
+WHERE PrimeiroNome NOT IN ('Victor') AND PrimeiroNome LIKE '%f%'
+
+
+IDADE MAXIMA DAS ALUNAS COM NOME INICIADOS EM ‘G’
+
+SELECT MAX(Idade) AS MAX_g 
+FROM `Alunos`
+WHERE Sexo = "FEM" AND PrimeiroNome NOT IN ('Victor') AND PrimeiroNome LIKE 'g%'
+
+Idade minima dos alunos com nome iniciados em ‘r’
+
+SELECT MIN(Idade) AS MIN_COMR 
+FROM `Alunos`
+WHERE Sexo = "MASC" AND PrimeiroNome NOT IN ('Victor') AND PrimeiroNome LIKE 'r%'
+
+
+Soma das idades máximas e mínimas
+
+SELECT 
+    (SELECT SUM(IdadeMax) FROM (SELECT MAX(Idade) AS IdadeMax FROM `Alunos` WHERE PrimeiroNome NOT IN ('Victor') GROUP BY PrimeiroNome) AS IdadesMaximas) AS SOMA_MAX_IDADE,
+    (SELECT SUM(IdadeMin) FROM (SELECT MIN(Idade) AS IdadeMin FROM `Alunos` WHERE PrimeiroNome NOT IN ('Victor') GROUP BY PrimeiroNome) AS IdadesMinimas) AS SOMA_MIN_IDADE;
+
+
+
+Alunas que tem “a” no nome
+SELECT * FROM `Alunos` WHERE PrimeiroNome LIKE '%a%' AND Sexo = "FEM"
+
+
+
+
+
+
